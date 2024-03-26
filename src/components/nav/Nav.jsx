@@ -3,8 +3,7 @@ import styles from "./Nav.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { userDestroySessionAnsync, userSelector } from "../../redux/reducers/usersReducer";
 export default function Nav (){
-    const userId=null;
-    const {isLoggedIn,userLoggedIn}=useSelector(userSelector);
+    const {isLoggedIn}=useSelector(userSelector);
     const dispatch=useDispatch();
     function logout(){
         // isLoggedIn ? dispatch(userDestroySessionAnsync()):undefined ;

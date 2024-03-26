@@ -1,8 +1,8 @@
 import{ useNavigate} from "react-router-dom";
 import styles from "./SignUp.module.css";
 import { useState } from "react";
-import { createUserAsync , userSelector} from "../../redux/reducers/usersReducer";
-import { useDispatch , useSelector} from "react-redux";
+import { createUserAsync } from "../../redux/reducers/usersReducer";
+import { useDispatch } from "react-redux";
 
 
 
@@ -19,7 +19,7 @@ export default function SignUp(){
         status.then(
             (result) => { 
             //    console.log(result.payload);
-               {result.payload?navigate("/sign-in"):navigate("/sign-up")};  
+               (result.payload?navigate("/sign-in"):navigate("/sign-up"))
             },
             (error) => { 
                console.log(error);

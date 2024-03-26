@@ -1,18 +1,18 @@
 import{Link,useNavigate} from "react-router-dom";
 import styles from "./SignIn.module.css";
 import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { createSessionAsync, userSelector, getInitialUsersAsync } from "../../redux/reducers/usersReducer";
+import { useDispatch } from "react-redux";
+import { createSessionAsync , getInitialUsersAsync } from "../../redux/reducers/usersReducer";
 
 export default function SignIn(){
 
     const [user,setUser]=useState({email:"",password:""});
     const navigate=useNavigate();
     const dispatch=useDispatch();
-    const {userLoggedIn, isLoggedIn, userList}=useSelector(userSelector);
+
     useEffect(()=>{
-        const status=dispatch(getInitialUsersAsync());
-    },[isLoggedIn])
+        dispatch(getInitialUsersAsync());
+    },[dispatch])
 
     async function handelSubmit(e){
         e.preventDefault();
