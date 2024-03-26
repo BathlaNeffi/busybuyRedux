@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { productSelector,productActions,getInitialStateAsync } from "../../redux/reducers/productsReducer"
+import { productSelector,getInitialStateAsync } from "../../redux/reducers/productsReducer"
 import { useSelector, useDispatch } from "react-redux";
 import styles from "./ItemsGallery.module.css";
 import ItemCard from "../items/ItemCard";
@@ -9,12 +9,13 @@ export default function ItemsGallery(){
 
     const dispatch=useDispatch();
     useEffect(()=>{
+        function fetchData(){
+            dispatch(getInitialStateAsync());
+        }
         fetchData();
-    },[])
+    },[dispatch])
 
-    function fetchData(){
-        dispatch(getInitialStateAsync());
-    }
+    
 
     const [search, setSearch]=useState("");
     const state=useSelector(productSelector);
