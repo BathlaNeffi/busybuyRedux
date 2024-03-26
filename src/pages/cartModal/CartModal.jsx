@@ -16,7 +16,7 @@ export default function CartModal(){
             setTimeout(()=>{
                 setLoading(false);
             },300);
-        });
+        },[dispatch]);
 
         const [isLoading,setLoading]=useState(true);
 
