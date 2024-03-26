@@ -1,0 +1,81 @@
+.containerItem{
+    height: 400px;
+    width: 200px;
+    border-radius: 5px;
+    margin: 10px 20px;
+    box-shadow: 0px 10px 20px grey;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    align-items: center;
+    padding: 10px;
+}
+
+span{
+    margin:10px 0px;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #224957;
+    font-weight: 600;
+}
+
+.para{
+    font-size: 1.3rem;
+    color: #224957;
+    font-weight: 900;
+    margin: 10px 0px;
+    position: relative;
+    left: 10px;
+    
+}
+
+
+.imgWrapper{
+    height: 250px;
+    width: 180px;
+    display: flex;
+    align-items: center;
+
+}
+
+img{
+    max-width: 100%;
+    max-height:100%;
+}
+
+.btn{
+    width: 180px;
+    height: 40px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+    background-color: #dd4a37;
+    border: 0px;
+    border-radius: 10px;
+    transition: all 0.3s  ease-in-out;
+}
+
+.btn:hover{
+    color: #dd4a37;
+    background-color: #fff;
+    border: 1px #dd4a37 solid;
+    cursor: pointer;
+}
+
+
+.imgBtn{
+    height: 30px;
+    width: auto;
+    transition: all 0.1s ease-in-out;
+}
+.imgBtn:active{
+    height: 35px;
+    width: auto;
+} 
+.priceDiv{
+    width: 200px;
+    display: flex;
+    /* border: 1px black solid; */
+    align-items: center;
+    justify-content:space-around;
+}

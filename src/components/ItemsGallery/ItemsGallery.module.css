@@ -1,0 +1,53 @@
+.itemsContainer{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.itemsWraapper{
+    width: 780px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.filterBox{
+    position:fixed;
+    top: 175px;
+    left:0px;
+    height: 300px;
+    width: 200px;
+    background-color: #e3e3fa;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.filterBox form{
+    display: flex;
+    flex-direction: column;
+}
+
+form input[type=checkbox]{
+    margin: 5px 10px;
+}
+
+
+h2{
+    color: #224957;
+    font-size: 1.2rem;
+    text-align: center;
+}
+.priceRangeValue{
+    text-align: center;
+    color: #172f38;
+    font-size: 1rem;
+}
+
+
+.spinnerClass{
+   position: absolute;
+   top: 30vh;
+   right: 38vw;
+}
