@@ -9,7 +9,7 @@ export default function Orders(){
      const dispatch=useDispatch();
     useEffect(()=>{
         dispatch(getInitialCartOrdersThunk());
-    },[]);
+    },[dispatch]);
     const orderHistory=myorder;
     console.log(orderHistory);
     // orderHistory.map((arr)=>arr.map((item)=>console.log(item.timestamp)))
